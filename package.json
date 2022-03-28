@@ -1,6 +1,6 @@
 {
   "name": "capacitor-plugin-sign-in-with-apple-v3",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "one sign in with apple plugin on capacitor v3",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",

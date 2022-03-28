@@ -5,4 +5,8 @@
 // each method the plugin supports using the CAP_PLUGIN_METHOD macro.
 CAP_PLUGIN(SignInWithApplePlugin, "SignInWithApple",
            CAP_PLUGIN_METHOD(echo, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(getCanShowButton, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(login, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(checkStateWithUserID, CAPPluginReturnPromise);
+
 )
