@@ -9,6 +9,22 @@ npm install capacitor-plugin-sign-in-with-apple-v3
 npx cap sync
 ```
 
+## USE
+
+```js
+import { SignInWithApple } from 'capacitor-plugin-sign-in-with-apple-v3';
+
+async applelogin() {
+    const { value } = await SignInWithApple.getCanShowButton();
+    console.log("applelogin ~ can show:", value)
+    if (value) {
+      const r = await SignInWithApple.login()
+      console.log("applelogin", r);
+    }
+  }
+
+```
+
 ## API
 
 <docgen-index>
