@@ -104,15 +104,15 @@ checkStateWithUserID(options: { userId: string; }) => Promise<CheckStateResponse
 
 #### LoginResponse
 
-| Prop             | Type                                                  |
-| ---------------- | ----------------------------------------------------- |
-| **`"state"`**    | <code>number</code>                                   |
-| **`"errCode"`**  | <code>string</code>                                   |
-| **`"errDesc"`**  | <code>string</code>                                   |
-| **`"userInfo"`** | <code><a href="#userinfo">UserInfo</a> \| null</code> |
+| Prop            | Type                                                            |
+| --------------- | --------------------------------------------------------------- |
+| **`"state"`**   | <code>number</code>                                             |
+| **`"errCode"`** | <code>string</code>                                             |
+| **`"errDesc"`** | <code>string</code>                                             |
+| **`"info"`**    | <code><a href="#appleuserinfo">AppleUserInfo</a> \| null</code> |
 
 
-#### UserInfo
+#### AppleUserInfo
 
 | Prop                     | Type                |
 | ------------------------ | ------------------- |

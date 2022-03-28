@@ -8,7 +8,7 @@ export interface SignInWithApplePlugin {
 export interface CanShowButton {
   value: boolean;
 }
-export interface UserInfo {
+export interface AppleUserInfo {
   "state": string,
   "userIdentifier": string,
   "familyName": string,
@@ -34,7 +34,7 @@ export interface LoginResponse {
   "state": number, // 1 is success , -1 is fail
   "errCode": string,
   "errDesc": string,
-  "userInfo": UserInfo | null
+  "info": AppleUserInfo | null
 }
 
 export interface CheckStateResponse {
