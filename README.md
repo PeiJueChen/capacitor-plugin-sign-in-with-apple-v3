@@ -14,6 +14,10 @@ npx cap sync
 <docgen-index>
 
 * [`echo(...)`](#echo)
+* [`getCanShowButton()`](#getcanshowbutton)
+* [`login()`](#login)
+* [`checkStateWithUserID(...)`](#checkstatewithuserid)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -33,5 +37,94 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
 --------------------
+
+
+### getCanShowButton()
+
+```typescript
+getCanShowButton() => Promise<CanShowButton>
+```
+
+**Returns:** <code>Promise&lt;<a href="#canshowbutton">CanShowButton</a>&gt;</code>
+
+--------------------
+
+
+### login()
+
+```typescript
+login() => Promise<LoginResponse>
+```
+
+**Returns:** <code>Promise&lt;<a href="#loginresponse">LoginResponse</a>&gt;</code>
+
+--------------------
+
+
+### checkStateWithUserID(...)
+
+```typescript
+checkStateWithUserID(options: { userId: string; }) => Promise<CheckStateResponse>
+```
+
+| Param         | Type                             |
+| ------------- | -------------------------------- |
+| **`options`** | <code>{ userId: string; }</code> |
+
+**Returns:** <code>Promise&lt;<a href="#checkstateresponse">CheckStateResponse</a>&gt;</code>
+
+--------------------
+
+
+### Interfaces
+
+
+#### CanShowButton
+
+| Prop        | Type                 |
+| ----------- | -------------------- |
+| **`value`** | <code>boolean</code> |
+
+
+#### LoginResponse
+
+| Prop             | Type                                                  |
+| ---------------- | ----------------------------------------------------- |
+| **`"state"`**    | <code>number</code>                                   |
+| **`"errCode"`**  | <code>string</code>                                   |
+| **`"errDesc"`**  | <code>string</code>                                   |
+| **`"userInfo"`** | <code><a href="#userinfo">UserInfo</a> \| null</code> |
+
+
+#### UserInfo
+
+| Prop                     | Type                |
+| ------------------------ | ------------------- |
+| **`"state"`**            | <code>string</code> |
+| **`"userIdentifier"`**   | <code>string</code> |
+| **`"familyName"`**       | <code>string</code> |
+| **`"givenName"`**        | <code>string</code> |
+| **`"nickname"`**         | <code>string</code> |
+| **`"middleName"`**       | <code>string</code> |
+| **`"namePrefix"`**       | <code>string</code> |
+| **`"nameSuffix"`**       | <code>string</code> |
+| **`"familyName_phone"`** | <code>string</code> |
+| **`"givenName_phone"`**  | <code>string</code> |
+| **`"nickname_phone"`**   | <code>string</code> |
+| **`"namePrefix_phone"`** | <code>string</code> |
+| **`"nameSuffix_phone"`** | <code>string</code> |
+| **`"middleName_phone"`** | <code>string</code> |
+| **`"email"`**            | <code>string</code> |
+| **`"identityToken"`**    | <code>string</code> |
+| **`"authCode"`**         | <code>string</code> |
+| **`"realUserStatus"`**   | <code>string</code> |
+
+
+#### CheckStateResponse
+
+| Prop            | Type                | Description                                                                                                                                                                                                                 |
+| --------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`"state"`**   | <code>number</code> | ["state":1,"errDesc": "Apple ID Credential is valid"] ["state":-1, "errDesc": "Apple ID Credential revoked, handle unlink"] ["state":-2, "errDesc": "Credential not found, show login UI"] ["state":-3, "errDesc": "Other"] |
+| **`"errDesc"`** | <code>string</code> |                                                                                                                                                                                                                             |
 
 </docgen-api>

@@ -19,4 +19,25 @@ public class SignInWithApplePlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void getCanShowButton(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("value", "getCanShowButton method only works on ios ");
+        call.resolve(ret);
+    }
+
+    @PluginMethod
+    public void login(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("value", "login method only works on ios ");
+        call.resolve(ret);
+    }
+
+    @PluginMethod
+    public void checkStateWithUserID(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("value", "checkStateWithUserID method only works on ios ");
+        call.resolve(ret);
+    }
 }
